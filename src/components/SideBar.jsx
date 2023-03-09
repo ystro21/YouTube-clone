@@ -3,12 +3,6 @@ import { categories } from '../utils/constants'
 
 const selectedCategory = 'New'
 
-const hoverSx = {
-    "&:hover": {
-        color: 'white'
-    }
-}
-
 const SideBar = () => (
     <Stack
         direction="row"
@@ -27,8 +21,8 @@ const SideBar = () => (
                 }}
                 key={category.name}
             >
-                <spam  style={{color: category.name === selectedCategory ? 'white' : 'red', marginRight: '15px'}}>{category.icon}</spam>
-                <spam style={{opacity: category.name === selectedCategory ? '1' : '0.8'}}>{category.name}</spam>
+                <span  style={{color: category.name === selectedCategory ? 'white' : 'red', marginRight: '15px'}}>{category.icon}</span>
+                <span style={{opacity: category.name === selectedCategory ? '1' : '0.8'}}>{category.name}</span>
             </button>
         ))}
 
